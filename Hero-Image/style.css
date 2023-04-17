@@ -41,3 +41,21 @@ html,body{
     font-size: 24px;
     text-shadow: 0px 0px 2px #000;
 }
+
+.nav{
+    background-color: #fffc31;
+    color: #444;
+    font-weight: 700;
+    width: 100%;
+}
+
+.nav li{
+    display: inline-block;
+    margin-right: 2em;
+    padding: 15px;
+}
+
+.nav.pinned{
+    position: fixed;
+    top: 0;
+}
