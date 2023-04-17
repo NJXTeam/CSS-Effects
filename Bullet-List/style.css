@@ -1,0 +1,12 @@
+.custom-list li{
+    list-style-type: none;
+    position: relative;
+}
+.custom-list li::before{
+    content: "\f00c";     /* AstronautWeb */
+    position: absolute;
+    font-family: FontAwesome;
+    color: green;
+    font-size: 1rem;
+    left: -1.3em; 
+}
