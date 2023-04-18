@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decorative Title</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+        body{
+            text-align: center;
+        }
+        
+        .title{
+            display: inline-block;
+            position: relative;
+            font-family: 'Alkatra', cursive;
+            color: #e71d36;
+        }
+
+        .title::after, .title::before{
+            content: '';   
+            position: absolute;
+            width: 120px;
+            height: 3px;
+            background-color: currentColor;
+            top: 0.6em;
+            transform: scale(0);
+            transition: all 0.3s ease-out;
+        }
+
+        .title:hover::after, .title:hover::before{
+            transform: scale(1);
+        }
+
+        .title::after{
+            right: -150px;
+        }
+
+        .title::before{
+            left: -150px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="title">Perú</h1>
+</body>
+</html>
