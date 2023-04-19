@@ -5,7 +5,7 @@
     --main-text-color: DarkSlateGray;
     --accent-color: MediumBlue;
     --secondary-text-color: GhostWhite;
-    --main-color: GhostWhite;
+    --main-color: rgb(220, 220, 220);
 }
 
 body{
@@ -16,10 +16,18 @@ body{
     background-color: var(--bg-color);
 }
 
+svg{
+    height: 1rem;
+}
+
 .dark-mode-controls{
     position: absolute;
     top: 1em;
     right: 1em;
+}
+
+.dark-toggle{
+    display: none;
 }
 
 .dark-toggle + label{
@@ -97,9 +105,17 @@ body{
     border: 0;
 }
 
-@media(prefers-color-scheme: dark){
-    :root{
-        --bg-color: #475657;
+@media(prefers-color-scheme: dark), (prefers-color-scheme: no-preference){
+    body:not(.force-light){
+        --bg-color: #0d1b1e;
+        --main-color: #4a6d7c;
+        --accent-color: #e56399;
+        --main-text-color: #e5d4ce;
+        --secondary-text-color: #ffffff;
+    }
+
+    body.force-dark{
+        --bg-color: #0d1b1e;
         --main-color: #4a6d7c;
         --accent-color: #e56399;
         --main-text-color: #e5d4ce;
